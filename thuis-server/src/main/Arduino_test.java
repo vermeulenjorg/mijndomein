@@ -21,8 +21,6 @@ public class Arduino_test {
 
         if (userPort.isOpen()) {
             System.out.println("Port initialized!");
-
-
             //timeout not needed for event based reading
             //userPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 100, 0);
         } else {

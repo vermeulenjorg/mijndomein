@@ -31,6 +31,7 @@ void setup(void)
 
   // Start up the library
   sensors.begin();
+  MFS.write("OFF");
 }
 
 /*
@@ -38,35 +39,37 @@ void setup(void)
  */
 void loop(void)
 { 
-
   sensors.requestTemperatures(); // Send the command to get temperatures
-
-
   float temp = sensors.getTempCByIndex(0);
-  Serial.println(temp);
-
-  MFS.write(temp, 2);
   delay(2000);
-
   if ( Serial.available()) // Check to see if at least one character is available
   {
     char ch = Serial.read();
     if(ch == '1') // is this an ascii digit between 0 and 1?
     {
-       blinkRate = (ch - '0');      // ASCII value converted to numeric value
-       blinkRate = (blinkRate + 5) * 100; // actual blinkrate is 100 mS times received digit
+       digitalWrite(ledPin,LOW);
+       showTemp(temp);
+//       blinkRate = (ch - '0');      // ASCII value converted to numeric value
+//       blinkRate = (blinkRate + 5) * 100; // actual blinkrate is 100 mS times received digit
       
-       Serial.write(ch);
+//       Serial.write(ch);
 //       Serial.write(ch);
     }
     if(ch == '0') // is this an ascii digit between 0 and 1?
     {
-      digitalWrite(ledPin,LOW);
+//      digitalWrite(ledPin,LOW);
+      digitalWrite(ledPin,HIGH);
+      MFS.write("OFF");
      }
   }
-  blink();
+//  blink();
 }
-  
+
+void showTemp(float temp)
+{
+  Serial.println(temp);
+  MFS.write(temp, 2);
+}
 void blink()
 {
   digitalWrite(ledPin,LOW);
