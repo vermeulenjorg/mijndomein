@@ -41,7 +41,7 @@ void loop(void)
 { 
   sensors.requestTemperatures(); // Send the command to get temperatures
   float temp = sensors.getTempCByIndex(0);
-  delay(2000);
+//  delay(2000);
   if ( Serial.available()) // Check to see if at least one character is available
   {
     char ch = Serial.read();
