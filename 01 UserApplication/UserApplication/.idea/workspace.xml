@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7088ceb3-ce28-4a0a-8e04-c5021f44be28" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/UserApplication$GroupControlsTest.ic" NAME="GroupControlsTest Coverage Results" MODIFIED="1547671423919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>JUnit.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UserApplication$main.ic" NAME="main Coverage Results" MODIFIED="1547675484315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/UserApplication$DeviceControlsTest1.ic" NAME="DeviceControlsTest1 Coverage Results" MODIFIED="1547670783993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>JUnit.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="250" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1095518078">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="3" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="4" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="98" />
+          <entry key="uml" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="98" />
+          <entry key="UML" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="44779" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="44779" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/User/UserControls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="234" column="23" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#UserControls#0;class#UserControls#0" />
+                <element signature="method#UserControls#0;class#UserControls#0" />
+                <element signature="docComment;method#login#0;class#UserControls#0" />
+                <element signature="docComment;method#addDevice#0;class#UserControls#0" />
+                <element signature="docComment;method#deleteDevice#0;class#UserControls#0" />
+                <element signature="docComment;method#deviceActivation#0;class#UserControls#0" />
+                <element signature="docComment;method#showDeviceState#0;class#UserControls#0" />
+                <element signature="docComment;method#showAllDevices#0;class#UserControls#0" />
+                <element signature="docComment;method#createGroup#0;class#UserControls#0" />
+                <element signature="method#createGroup#0;class#UserControls#0" />
+                <element signature="docComment;method#deleteGroup#0;class#UserControls#0" />
+                <element signature="docComment;method#showGroups#0;class#UserControls#0" />
+                <element signature="docComment;method#showDevicesInGroup#0;class#UserControls#0" />
+                <element signature="docComment;method#addDeviceToGroup#0;class#UserControls#0" />
+                <element signature="docComment;method#removeDeviceFromGroup#0;class#UserControls#0" />
+                <element signature="docComment;method#setGroupActivationState#0;class#UserControls#0" />
+                <element signature="method#setGroupActivationState#0;class#UserControls#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PwdHash/PwdHash.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Device/Device.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="38" column="40" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#Device#0;class#Device#0" />
+                <element signature="docComment;method#saveNewDevice#0;class#Device#0" />
+                <element signature="docComment;method#deleteDevice#0;class#Device#0" />
+                <element signature="e#4627#4628#0" expanded="true" />
+                <element signature="e#4660#4661#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SystemControls/DeviceControls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-374">
+              <caret line="129" column="44" lean-forward="true" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#DeviceControls#0;class#DeviceControls#0" />
+                <element signature="method#DeviceControls#0;class#DeviceControls#0" />
+                <element signature="docComment;method#setDeviceActivationState#0;class#DeviceControls#0" />
+                <element signature="method#setDeviceActivationState#0;class#DeviceControls#0" />
+                <element signature="docComment;method#showState#0;class#DeviceControls#0" />
+                <element signature="method#showState#0;class#DeviceControls#0" />
+                <element signature="docComment;method#showAllDevices#0;class#DeviceControls#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Centrale/Centrale.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1507#1508#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
+                <element signature="e#1593#1594#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#1823#1824#0" expanded="true" />
+                <element signature="e#1861#1862#0" expanded="true" />
+                <element signature="e#1895#1896#0" expanded="true" />
+                <element signature="e#1953#1954#0" expanded="true" />
+                <element signature="e#1999#2000#0" expanded="true" />
+                <element signature="e#2041#2042#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
+                <element signature="e#2133#2134#0" expanded="true" />
+                <element signature="e#2179#2180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SystemControls/CentraleControls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1743#1753#0" expanded="true" />
+                <element signature="e#2458#2466#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/User/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#User#0;class#User#0" />
+                <element signature="method#User#0;class#User#0" />
+                <element signature="docComment;method#getUserID#0;class#User#0" />
+                <element signature="method#getUserID#0;class#User#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Authentication/Authenticate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#verifyUser#0;class#Authenticate#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Arquillian JUnit Test Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>id not</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Interfaces/DeviceList.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Authenticate.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Group.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Measure.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/AnalogMeasure.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/DigitalMeasure.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/MeasureCheck.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/DeviceControls/DeviceControls.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/DeviceControls/AnalogControl.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/DeviceControls/DigitalControl.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Check.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/CheckDeviceType.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Measure/MeasureCheck.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Device.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/DeviceControls/ControlCheck.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/UserControls.java" />
+        <option value="$PROJECT_DIR$/src/AppComponents/Group/Group.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/User/main.java" />
+        <option value="$PROJECT_DIR$/src/Interfaces/iDeviceList.java" />
+        <option value="$PROJECT_DIR$/src/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/DeviceControls/ControlCheck.java" />
+        <option value="$PROJECT_DIR$/src/Measure/MeasureCheck.java" />
+        <option value="$PROJECT_DIR$/src/Database/DatabaseSearch.java" />
+        <option value="$PROJECT_DIR$/src/SystemControls/Controls.java" />
+        <option value="$PROJECT_DIR$/src/Device/CheckDeviceType.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/module-info.java" />
+        <option value="$PROJECT_DIR$/src/API/API.java" />
+        <option value="$PROJECT_DIR$/src/Database/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/SystemControls/DeviceControlsTest.java" />
+        <option value="$PROJECT_DIR$/src/JUnit/DeviceControlsTest.java" />
+        <option value="$PROJECT_DIR$/src/SystemControls/GroupControls.java" />
+        <option value="$PROJECT_DIR$/src/SystemControls/GroupControlsTest.java" />
+        <option value="$PROJECT_DIR$/src/Group/Group.java" />
+        <option value="$PROJECT_DIR$/src/JUnit/DeviceControlsTest1.java" />
+        <option value="$PROJECT_DIR$/src/JUnit/GroupControlsTest.java" />
+        <option value="$PROJECT_DIR$/src/JUnit/UserControlsTest.java" />
+        <option value="$PROJECT_DIR$/src/PwdHash/PwdHash.java" />
+        <option value="$PROJECT_DIR$/src/User/User.java" />
+        <option value="$PROJECT_DIR$/src/Authentication/Authenticate.java" />
+        <option value="$PROJECT_DIR$/src/Main/main.java" />
+        <option value="$PROJECT_DIR$/src/SystemControls/DeviceControls.java" />
+        <option value="$PROJECT_DIR$/src/Centrale/Centrale.java" />
+        <option value="$PROJECT_DIR$/src/SystemControls/CentraleControls.java" />
+        <option value="$PROJECT_DIR$/src/User/UserControls.java" />
+        <option value="$PROJECT_DIR$/src/Device/Device.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="594" />
+    <option name="y" value="70" />
+    <option name="width" value="1024" />
+    <option name="height" value="565" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
+          <expand>
+            <path>
+              <item name="UserApplication" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UserApplication" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="UserApplication" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UserApplication" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Device" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SystemControls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UserApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UserApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Z_UML" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547741510812" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jBCrypt-0.4.zip!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="JUnit" />
+      <recent name="SystemControls" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Interfaces" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.main">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-11.0.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main.main" />
+      <module name="UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeviceControlsTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+      <module name="UserApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JUnit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="PACKAGE_NAME" value="JUnit" />
+      <option name="MAIN_CLASS_NAME" value="JUnit.DeviceControlsTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeviceControlsTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JUnit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="JUnit" />
+      <option name="MAIN_CLASS_NAME" value="JUnit.DeviceControlsTest1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupControlsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JUnit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="JUnit" />
+      <option name="MAIN_CLASS_NAME" value="JUnit.GroupControlsTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="Arquillian JUnit.DeviceControlsTest" />
+      <item itemvalue="JUnit.DeviceControlsTest1" />
+      <item itemvalue="JUnit.GroupControlsTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.GroupControlsTest" />
+        <item itemvalue="JUnit.DeviceControlsTest1" />
+        <item itemvalue="Arquillian JUnit.DeviceControlsTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7088ceb3-ce28-4a0a-8e04-c5021f44be28" name="Default Changelist" comment="" />
+      <created>1543672489459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543672489459</updated>
+      <workItem from="1543672505634" duration="30984000" />
+      <workItem from="1544211630249" duration="6870000" />
+      <workItem from="1544264148080" duration="2112000" />
+      <workItem from="1544277545229" duration="170000" />
+      <workItem from="1544277766409" duration="39916000" />
+      <workItem from="1544719790951" duration="7654000" />
+      <workItem from="1544876504190" duration="1207000" />
+      <workItem from="1545154302595" duration="673000" />
+      <workItem from="1546883005332" duration="23835000" />
+      <workItem from="1547127711472" duration="14338000" />
+      <workItem from="1547245017560" duration="25193000" />
+      <workItem from="1547324254502" duration="85585000" />
+      <workItem from="1547675630125" duration="85000" />
+      <workItem from="1547724659595" duration="7391000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="DeviceControlsTest1 - 2019.01.16 at 20h 50m 07s.xml">
+      <configuration name="DeviceControlsTest1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceControlsTest1 - 2019.01.16 at 20h 50m 54s.xml">
+      <configuration name="DeviceControlsTest1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceControlsTest1 - 2019.01.16 at 20h 51m 29s.xml">
+      <configuration name="DeviceControlsTest1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceControlsTest1 - 2019.01.16 at 20h 58m 49s.xml">
+      <configuration name="DeviceControlsTest1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceControlsTest1 - 2019.01.16 at 20h 59m 32s.xml">
+      <configuration name="DeviceControlsTest1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupControlsTest - 2019.01.16 at 21h 27m 53s.xml">
+      <configuration name="GroupControlsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupControlsTest - 2019.01.16 at 21h 28m 37s.xml">
+      <configuration name="GroupControlsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupControlsTest - 2019.01.16 at 21h 30m 52s.xml">
+      <configuration name="GroupControlsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceControlsTest1 - 2019.01.16 at 21h 33m 17s.xml">
+      <configuration name="DeviceControlsTest1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroupControlsTest - 2019.01.16 at 21h 43m 56s.xml">
+      <configuration name="GroupControlsTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="246013000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24935733" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="simpleUML" order="7" weight="0.32995737" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" weight="0.3800539" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295964" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010395" side_tool="true" weight="0.48101267" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32884097" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32969153" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32969153" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24293059" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="simpleUML" order="7" weight="0.32995737" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" weight="0.3800539" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910313" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295964" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010395" side_tool="true" weight="0.48101267" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32884097" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32969153" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/DeviceList.java" />
+    <entry file="file://$PROJECT_DIR$/src/AppComponents/Check.java" />
+    <entry file="file://$PROJECT_DIR$/src/AppComponents/Authentication.java" />
+    <entry file="file://$PROJECT_DIR$/src/Measure/AnalogMeasure.java" />
+    <entry file="file://$PROJECT_DIR$/src/Measure/DigitalMeasure.java" />
+    <entry file="file://$PROJECT_DIR$/src/Measure/Measure.java" />
+    <entry file="file://$USER_HOME$/Documents/02 HHS/Jaar-2/MijnDomein/03 Klassendiagram/Intellij Class diagram v0.1.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="1.0" y="1.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User/main.java" />
+    <entry file="file://$PROJECT_DIR$/out/production/UserApplication/main.class" />
+    <entry file="file://$PROJECT_DIR$/src/DeviceControls/AnalogControl.java" />
+    <entry file="file://$PROJECT_DIR$/src/DeviceControls/DigitalControl.java" />
+    <entry file="file://$PROJECT_DIR$/src/DeviceControls/ControlCheck.java" />
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/iDeviceList.java" />
+    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/DataBase.java" />
+    <entry file="file://$PROJECT_DIR$/src/Measure/MeasureCheck.java" />
+    <entry file="file://$PROJECT_DIR$/src/Device/CheckDeviceType.java" />
+    <entry file="file://$PROJECT_DIR$/src/DeviceControls/DeviceControls.java" />
+    <entry file="file://$PROJECT_DIR$/src/Z_UML/Class diagram v0.1.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">Device.Device</node>
+            <node x="" y="">SystemControls.GroupControls</node>
+            <node x="" y="">Group.Group</node>
+            <node x="" y="">User.User</node>
+            <node x="" y="">SystemControls.DeviceControls</node>
+            <node x="" y="">Main.main</node>
+            <node x="" y="">User.UserControls</node>
+            <node x="" y="">Authentication.Authenticate</node>
+            <node x="" y="">Database.DBConnection</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.564785553047404" x="554.0" y="472.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module-info.java" />
+    <entry file="file://$PROJECT_DIR$/src/API/API.java" />
+    <entry file="file://$PROJECT_DIR$/src/Database/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="docComment;method#DBConnection#0;class#DBConnection#0" />
+            <element signature="method#DBConnection#0;class#DBConnection#0" />
+            <element signature="docComment;method#connection#0;class#DBConnection#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemControls/DeviceControlsTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/JUnit/DeviceControlsTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/SystemControls/GroupControlsTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/Group/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1601#1602#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1685#1686#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JUnit/DeviceControlsTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1447#1448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JUnit/GroupControlsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+          <folding>
+            <element signature="e#329#336#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
+            <element signature="e#1688#1696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemControls/GroupControls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1781">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#GroupControls#0;class#GroupControls#0" />
+            <element signature="method#GroupControls#0;class#GroupControls#0" />
+            <element signature="docComment;method#deleteGroup#0;class#GroupControls#0" />
+            <element signature="docComment;method#addDevice#0;class#GroupControls#0" />
+            <element signature="method#addDevice#0;class#GroupControls#0" />
+            <element signature="docComment;method#removeDevice#0;class#GroupControls#0" />
+            <element signature="method#removeDevice#0;class#GroupControls#0" />
+            <element signature="docComment;method#setGroupActivationState#0;class#GroupControls#0" />
+            <element signature="docComment;method#currentActivationState#0;class#GroupControls#0" />
+            <element signature="docComment;method#showGroups#0;class#GroupControls#0" />
+            <element signature="docComment;method#showDevicesInGroup#0;class#GroupControls#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JUnit/UserControlsTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/PwdHash/PwdHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#User#0;class#User#0" />
+            <element signature="method#User#0;class#User#0" />
+            <element signature="docComment;method#getUserID#0;class#User#0" />
+            <element signature="method#getUserID#0;class#User#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Authentication/Authenticate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#verifyUser#0;class#Authenticate#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Centrale/Centrale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1861#1862#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1999#2000#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2179#2180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemControls/DeviceControls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="129" column="44" lean-forward="true" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#DeviceControls#0;class#DeviceControls#0" />
+            <element signature="method#DeviceControls#0;class#DeviceControls#0" />
+            <element signature="docComment;method#setDeviceActivationState#0;class#DeviceControls#0" />
+            <element signature="method#setDeviceActivationState#0;class#DeviceControls#0" />
+            <element signature="docComment;method#showState#0;class#DeviceControls#0" />
+            <element signature="method#showState#0;class#DeviceControls#0" />
+            <element signature="docComment;method#showAllDevices#0;class#DeviceControls#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemControls/CentraleControls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1743#1753#0" expanded="true" />
+            <element signature="e#2458#2466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User/UserControls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="234" column="23" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#UserControls#0;class#UserControls#0" />
+            <element signature="method#UserControls#0;class#UserControls#0" />
+            <element signature="docComment;method#login#0;class#UserControls#0" />
+            <element signature="docComment;method#addDevice#0;class#UserControls#0" />
+            <element signature="docComment;method#deleteDevice#0;class#UserControls#0" />
+            <element signature="docComment;method#deviceActivation#0;class#UserControls#0" />
+            <element signature="docComment;method#showDeviceState#0;class#UserControls#0" />
+            <element signature="docComment;method#showAllDevices#0;class#UserControls#0" />
+            <element signature="docComment;method#createGroup#0;class#UserControls#0" />
+            <element signature="method#createGroup#0;class#UserControls#0" />
+            <element signature="docComment;method#deleteGroup#0;class#UserControls#0" />
+            <element signature="docComment;method#showGroups#0;class#UserControls#0" />
+            <element signature="docComment;method#showDevicesInGroup#0;class#UserControls#0" />
+            <element signature="docComment;method#addDeviceToGroup#0;class#UserControls#0" />
+            <element signature="docComment;method#removeDeviceFromGroup#0;class#UserControls#0" />
+            <element signature="docComment;method#setGroupActivationState#0;class#UserControls#0" />
+            <element signature="method#setGroupActivationState#0;class#UserControls#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Device/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Device#0;class#Device#0" />
+            <element signature="docComment;method#saveNewDevice#0;class#Device#0" />
+            <element signature="docComment;method#deleteDevice#0;class#Device#0" />
+            <element signature="e#4627#4628#0" expanded="true" />
+            <element signature="e#4660#4661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>UserApplication</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql-connector-java-8.0.13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
+  </component>
+</project>
