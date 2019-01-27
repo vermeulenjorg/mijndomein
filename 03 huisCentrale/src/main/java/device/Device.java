@@ -3,6 +3,7 @@ package Device;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import huisCentrale.Application;
 import huisCentrale.Controllers.DeviceController;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -219,48 +220,31 @@ public class Device {
                         message.append((char) b);
                         if ((b == 13 || b == 10)&& message.length() > 1) {
                             String toProcess = message.toString();
-                            // sent to Database
-//                        insertStatement(toProcess);
-//                        updateStatement(toProcess);
                             String[] parts = toProcess.substring(1).split("/");
-                            if (parts.length == 3){
+                            if (parts.length == 4){
                                 if (parts[0].length() == 6){
                                     deviceName = parts[0];
-                                    deviceState = parts[1];
-                                    deviceMeasure = parts[2];
+                                    deviceType = parts[1];
+                                    deviceState = parts[2];
+                                    deviceMeasure = parts[3];
                                     System.out.println(toProcess);
-
                                     try {
                                         String url = "http://localhost:8080";
                                         CloseableHttpClient client = HttpClients.createDefault();
                                         HttpPost httpPost = new HttpPost(url + "/adding");
 
                                         List<NameValuePair> params = new ArrayList<NameValuePair>();
+                                        params.add(new BasicNameValuePair("huisCentrale", Application.id));
                                         params.add(new BasicNameValuePair("deviceName", deviceName));
+                                        params.add(new BasicNameValuePair("deviceType", deviceType));
                                         params.add(new BasicNameValuePair("deviceState", deviceState));
                                         params.add(new BasicNameValuePair("deviceMeasure", deviceMeasure));
-
                                         httpPost.setEntity(new UrlEncodedFormEntity(params));
-
                                         CloseableHttpResponse response = client.execute(httpPost);
                                         client.close();
                                     }catch (Exception e){
 
                                     }
-
-
-
-//
-//                                    CloseableHttpClient client = HttpClients.createDefault();
-//                                    HttpPost httpPost = new HttpPost(url + "/adding?deviceName=" + deviceName + "?deviceState="+deviceState+"?deviceMeasure="+ deviceMeasure);
-//                                    CloseableHttpResponse response = client.execute(httpPost);
-//                                    client.close();
-//
-
-
-
-
-
                                 }
                             }
                             message.setLength(0);

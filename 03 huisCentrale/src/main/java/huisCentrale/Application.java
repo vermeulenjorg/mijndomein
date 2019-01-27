@@ -1,8 +1,11 @@
 package huisCentrale;
 
 import huisCentrale.Controllers.DeviceController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.core.env.Environment;
 
 import java.util.Timer;
 
@@ -11,6 +14,7 @@ public class Application {
     private static long delay  = 1000L;
     private static long period = 1000L;
     public static String id = "386dae03-d604-4166-aa17-a8a0af0b0848";
+
 /**
  * Maakt de ID voor de server (MAC ADRES)
  * RUNT de webserver voor communicatie

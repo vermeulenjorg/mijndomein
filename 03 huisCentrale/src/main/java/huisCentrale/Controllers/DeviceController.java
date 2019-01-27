@@ -154,14 +154,14 @@ public class DeviceController extends TimerTask {
         }
         for(SerialPort sp: SerialPort.getCommPorts()){
             String key = sp.getSystemPortName();
-            System.out.println(key);
             if(!devices.containsKey(key)){
+                System.out.println(key);
                 Device device = new Device(sp.getSystemPortName(), sp.getBaudRate());
                 addDevice(key, device);
                 device.start();
             }
             else{
-                System.out.println("all devices already added");
+//                System.out.println("all devices already added");
             }
         }
 
