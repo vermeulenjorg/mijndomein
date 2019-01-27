@@ -69,7 +69,7 @@ public class DeviceController {
         ArrayList<Device> allDevices = new ArrayList<>();
         try
         {
-            String query = "SELECT d.deviceID, d.devicePort,d.deviceState, d.deviceType, d.digitalstate FROM centraledevice cd LEFT JOIN centrale c ON c.centraleId = cd.centraleId LEFT JOIN device d ON d.deviceID = cd.deviceID WHERE c.centraleMac = (?)";
+            String query = "SELECT d.deviceID, d.devicePort,d.deviceState, d.deviceType, d.AnalogState FROM centraledevice cd LEFT JOIN centrale c ON c.centraleId = cd.centraleId LEFT JOIN device d ON d.deviceID = cd.deviceID WHERE c.centraleMac = (?)";
             PreparedStatement pstate = c.prepareStatement(query);
             pstate.setString(1, centraleId.getId());
             ResultSet result = pstate.executeQuery();
@@ -80,7 +80,7 @@ public class DeviceController {
                 int baudRate = 9600;
                 String deviceState = result.getString("deviceState");
                 String type = result.getString("deviceType");
-                String analogState = result.getString("digitalstate");
+                String analogState = result.getString("AnalogState");
                 Device ar = new Device(deviceID, comPort, baudRate, deviceState, type, analogState);
                 allDevices.add(ar);
             }
