@@ -1,0 +1,13 @@
+<form class="modal-content animate" th.action="@{/createdevice}" th.object="${Device}" method="post">
+    <div class="container">
+        <label for="deviceName"><b>deviceName</b></label>
+        <input type="text" placeholder="Enter deviceName" name="deviceName" th.field="*{deviceName}" required>
+        <label for="devicePort"><b>devicePort</b></label>
+        <input type="text" placeholder="Enter devicePort" name="devicePort" th.field="*{devicePort}" required>
+        <label for="deviceType"><b>deviceType</b></label>
+        <input type="text" placeholder="Enter deviceType" name="deviceType" th.field="*{deviceType}" required>
+        <label for="deviceType"><b>deviceType</b></label>
+        <input type="text" placeholder="Enter centraleID" name="centraleID" th.field="*{centraleID}" required>
+        <button type="submit">Submit</button>
+    </div>
+</form>

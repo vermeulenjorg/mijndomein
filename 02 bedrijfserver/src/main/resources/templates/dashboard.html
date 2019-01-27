@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <title>Dashboard</title>
+    <style th:inline="text">
+
+        /*body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}*/
+        /*body, html {*/
+            /*height: 100%;*/
+            /*color: #777;*/
+            /*line-height: 1.8;*/
+        /*}*/
+
+        body{
+            background-image: url("blue.png");
+            background-size: cover;
+            /*no-repeat center center fixed;*/
+        }
+
+
+        h2{
+            text-align: center;
+        }
+
+        p {
+            text-align: center;-->
+        }
+
+    </style>
+</head>
+<body>
+<p><h2>Welcome to your dashboard</h2></p>
+<p>Select a category</p>
+<center><form method="get" action="/allgroups">
+    <td><input name="" th:type="submit" value="MY GROUPS"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+<form method="get" action="/alldevices">
+    <td><input name="" th:type="submit" value="MY DEVICES"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+<form method="get" action="/stations">
+    <td><input name="" th:type="submit" value="MY STATIONS"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form></center>
+</body>
+</html>

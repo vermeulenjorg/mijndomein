@@ -1,0 +1,7 @@
+<form class="modal-content animate" th.action="@{/creategroup}" th.object="${Group}" method="post">
+    <div class="container">
+        <label for="groupName"><b>GroupName</b></label>
+        <input type="text" placeholder="Enter group name" name="groupName" th.field="*{groupName}" required>
+        <button type="submit">SUBMIT</button>
+    </div>
+</form>

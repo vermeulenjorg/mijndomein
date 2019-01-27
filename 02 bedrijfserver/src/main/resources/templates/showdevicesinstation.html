@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Devices in station</title>
+</head>
+<body>
+<p><h2>Devices attached to station</h2></p>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th> DeviceName </th>
+            <th> DeviceType </th>
+            <th> CurrentStatus </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${devices.empty}">
+            <td colspan="2"> No devices attached to station </td>
+        </tr>
+
+        <tr th:each="device : ${aDevices}">
+            <form method="post" action="/showdevicesinstation">
+            <td><span th:text="${device.deviceName}"> deviceName </span></td>
+            <td><span th:text="${device.deviceType}"> deviceType </span></td>
+            <td><span th:text="${device.getMeasuredAnalogState()}"> currentStatus </span></td>
+
+
+            <td><input type="hidden" name="centraleid" th:value="${centraleid}"></td>
+            <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+            <td><input type="number" name="Value" th:value="${device.getAnalogState()}"></td>
+            <td><input type="submit" value="SUBMIT"></td>
+            <!--<td><a th:href="@{~/activatedevice?deviceid={id}(id=${device.deviceID})}">Activate/De-activate</a></td>-->
+            <!--<td><a th:href="@{~/deletedevice?deviceid={id}(id=${device.deviceID})}">Delete device</a></td>-->
+
+            <!--<td><a  th:href="@{/group/${group.groupID}}">dsada</a></td>-->
+            <!--<td><a th:href="@{~/showdevicesinstation?centraleid={id}(id=${centrale.centraleID})}">show_devices</a></td>-->
+            <!--<td><a th:href="@{~/deletegroup?groupid={id}(id=${group.groupID})}">delete group</a></td>-->
+        </form>
+            <form method="post" action="/deletedevices">
+                <td><input type="submit" value="DELETE DEVICE"></td>
+                <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+            </form>
+        </tr>
+
+
+        <tr th:each="device : ${dDevices}">
+            <form method="post" action="/showdevicesinstation">
+            <td><span th:text="${device.deviceName}"> deviceName </span></td>
+            <td><span th:text="${device.deviceType}"> deviceType </span></td>
+            <td><span th:text="${device.getDeviceState()}"> currentStatus </span></td>
+
+            <td><input type="hidden" name="centraleid" th:value="${centraleid}"></td>
+            <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+            <td><input type="submit" value="ON or OFF"></td>
+
+            <!--<td><a th:href="@{~/activatedevice?deviceid={id}(id=${device.deviceID})}">Activate/De-activate</a></td>-->
+            <!--<td><a th:href="@{~/deletedevice?deviceid={id}(id=${device.deviceID})}">Delete device</a></td>-->
+
+            <!--<td><a  th:href="@{/group/${group.groupID}}">dsada</a></td>-->
+            <!--<td><a th:href="@{~/showdevicesinstation?centraleid={id}(id=${centrale.centraleID})}">show_devices</a></td>-->
+            <!--<td><a th:href="@{~/deletegroup?groupid={id}(id=${group.groupID})}">delete group</a></td>-->
+        </form>
+            <form method="post" action="/deletedevices">
+                <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+                <td><input type="submit" value="DELETE DEVICE"></td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+<form method="get" action="/stations">
+    <td><input name="" th:type="submit" value="BACK TO STATIONS"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+<form method="get" action="/dashboard">
+    <td><input name="" th:type="submit" value="BACK TO DASHBOARD"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+
+<!--<p><a th:href="@{/dashboard}"><th:block>Back to dashboard</th:block></a></p>-->
+</body>
+</html>

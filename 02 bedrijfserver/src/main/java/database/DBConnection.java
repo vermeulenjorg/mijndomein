@@ -1,11 +1,11 @@
-package database;
+package Database;
 
 import java.sql.*;
 
 public class DBConnection
 {
     /**
-     * Constructor.
+     * Constructor DBConnection.
      */
     public DBConnection()
     {
@@ -21,7 +21,7 @@ public class DBConnection
         Connection conn = null;
         try
         {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mijndomein?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "root");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mijndomein?usessl=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "root");
         }
         catch (Exception e)
         {

@@ -1,0 +1,10 @@
+<form class="modal-content animate" th.action="@{/adddevicetogroup}"  method="post">
+    <div class="container">
+        <label for="deviceName"><b>deviceID</b></label>
+        <input type="text" placeholder="Enter deviceID" name="deviceID" th.field="*{deviceID}" required>
+        <label for="devicePort"><b>groupID</b></label>
+        <input type="text" placeholder="Enter groupID" name="groupID" th.field="*{groupID}" required>
+
+        <button type="submit">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>Available groups</h2>
+<p>Select the group you wish to edit.</p>
+<form method="get" action="/creategroup">
+    <td><input name="" th:type="submit" value="CREATE NEW GROUP"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+
+    <table>
+        <thead>
+        <tr>
+            <th> Name </th>
+            <th> Status </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${groups.empty}">
+            <td colspan="2"> No groups available </td>
+        </tr>
+        <tr th:each="group : ${groups}">
+            <form method="get" action="/allgroups">
+            <td><span th:text="${group.getName()}"> name </span></td>
+            <td><span th:text="${group.getActivationState()}"> status </span></td>
+            <!--<td><a  th:href="@{/group/${group.groupID}}">dsada</a></td>-->
+            </form>
+            <form method="post" action="/groupactivation">
+                <td><input th:type="submit" value="ON or OFF"></td>
+                <td><input type="hidden" name="groupid" th:value="${group.getGroupID()}"></td>
+            </form>
+            <form method="get" action="/showdevicesingroup">
+                <td><input th:type="submit" value="SHOW DEVICES"></td>
+                <td><input type="hidden" name="groupid" th:value="${group.getGroupID()}"></td>
+            </form>
+            <form method="post" action="/deletegroup">
+                <td><input th:type="submit" value="DELETE GROUP"></td>
+                <td><input type="hidden" name="groupid" th:value="${group.getGroupID()}"></td>
+            </form>
+
+
+            <!--<td><a th:href="@{~/groupactivation?groupid={id}(id=${group.groupID})}">Activate/De-activate</a></td>-->
+            <!--<td><a th:href="@{~/showdevicesingroup?groupid={id}(id=${group.groupID})}">show_devices</a></td>-->
+            <!--<td><a th:href="@{~/deletegroup?groupid={id}(id=${group.groupID})}">delete group</a></td>-->
+        </tr>
+        </tbody>
+    </table>
+
+<form method="get" action="/dashboard">
+    <td><input name="" th:type="submit" value="BACK TO DASHBOARD"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+<!--<p><a href="/creategroup">createGroup</a></p>-->
+<!--&lt;!&ndash;<p><a href="/createdevice">createDevice</a></p>&ndash;&gt;-->
+
+<!--<p><p><a th:href="@{/dashboard}"><th:block>Back to dashboard</th:block></a></p></p>-->
+
+<script>
+
+</script>
+
+</body>
+</html>

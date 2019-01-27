@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Devices in group</title>
+</head>
+<body>
+<p><h2>Devices in group</h2></p>
+
+<form method="post" action="/addtogroup">
+
+    <td><select name="deviceid">
+        <option
+                th:each="device : ${allUserDevices}" th:value="${device.getDeviceID()}" th:text="${device.getDeviceName()}">
+        </option>
+
+    </select> </td>
+    <td> <input th:type="hidden" name="groupid" th:value="${groupid}"></td>
+    <td><input name="" th:type="submit" value="ADD TO GROUP"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+    <table>
+        <thead>
+        <tr>
+            <th> DeviceName </th>
+            <th> CurrentStatus </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${devices.empty}">
+            <td colspan="2"> No devices in this group</td>
+        </tr>
+
+
+
+        <tr th:each="device : ${aDevices}">
+            <form method="post" action="/showdevicesingroup">
+            <td><span th:text="${device.deviceName}"> deviceName </span></td>
+            <td><span th:text="${device.getMeasuredAnalogState()}"> currentStatus </span></td>
+
+                <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+                <td><input type="number" name="Value" th:value="${device.getAnalogState()}"></td>
+                <td><input type="submit" value="SUBMIT"></td>
+                <td><input type="hidden" name="groupid" th:value="${groupid}"></td>
+
+
+
+            <!--<td><a th:href="@{~/activatedevice?deviceid={id}(id=${device.deviceID})}">Activate/De-activate</a></td>-->
+            <!--<td><a th:href="@{~/removefromgroup?deviceid={id}(id=${device.deviceID)&groupid={gid}(gid=${group}}">Remove from group</a></td>-->
+            </form>
+            <form method="post" action="/removefromgroup">
+                <td><input type="submit" value="DELETE FROM GROUP"></td>
+                <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+                <td><input th:type="hidden" name="groupid" th:value="${groupid}"> </td>
+            </form>
+        </tr>
+        <tr th:each="device : ${dDevices}">
+            <form method="post" action="/showdevicesingroup">
+            <td><span th:text="${device.deviceName}"> deviceName </span></td>
+            <td><span th:text="${device.getDeviceState()}"> currentStatus </span></td>
+
+                <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+                <td><input type="submit" value="ON or OFF"></td>
+                <td><input type="hidden" name="groupid" th:value="${groupid}"></td>
+
+
+
+            <!--<td><a th:href="@{~/activatedevice?deviceid={id}(id=${device.deviceID})}">Activate/De-activate</a></td>-->
+            <!--<td><a th:href="@{~/activatedevice?deviceid={id}(id=${device.deviceID})}">Activate/De-activate</a></td>-->
+            </form>
+            <form method="post" action="/removefromgroup">
+                <td><input type="hidden" name="deviceid" th:value="${device.deviceID}"></td>
+                <td><input type="submit" value="DELETE FROM GROUP"></td>
+                <td><input th:type="hidden" name="groupid" th:value="${groupid}"> </td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+
+
+<form method="get" action="/allgroups">
+    <td><input name="" th:type="submit" value="BACK TO GROUPS"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+
+
+
+
+<form method="get" action="/dashboard">
+    <td><input name="" th:type="submit" value="BACK TO DASHBOARD"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+<!--<p><a th:href="@{/allgroups}"><th:block>Back to groups</th:block></a></p>-->
+<!--<p><a th:href="@{/dashboard}"><th:block>Back to dashboard</th:block></a></p>-->
+</body>
+</html>

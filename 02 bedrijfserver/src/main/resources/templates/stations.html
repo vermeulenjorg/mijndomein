@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>All my devices</title>
+</head>
+<body>
+<p><h2>My stations</h2></p>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th> StationName </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${centrales.empty}">
+            <td colspan="2"> No stations available </td>
+        </tr>
+        <tr th:each="centrale : ${centrales}">
+            <td><span th:text="${centrale.centraleNaam}"> stationName </span></td>
+            <form method="get" action="/showdevicesinstation">
+            <td><input th:type="submit" value="SHOW DEVICES"></td>
+                <td><input type="hidden" name="centraleNaam" th:value="${centrale.getCentraleNaam()}"></td>
+            </form>
+            <form method="post" action="/deletecentrale">
+                <td><input th:type="submit" value="DELETE STATION"></td>
+                <td><input type="hidden" name="centraleNaam" th:value="${centrale.getCentraleNaam()}"></td>
+            </form>
+            <!--<td><a th:href="@{~/showdevicesinstation?centraleID={id}(id=${centrale.centraleID})}">Show devices</a></td>-->
+            <!--</form>-->
+            <!--<form method="get" action="/stations">-->
+        </tr>
+        </tbody>
+    </table>
+
+<form method="get" action="/dashboard">
+    <td><input name="" th:type="submit" value="BACK TO DASHBOARD"> </td>
+    <!--<p><a th:href="@{/stations}"><th:block>Back to stations</th:block></a></p>-->
+</form>
+</body>
+</html>
