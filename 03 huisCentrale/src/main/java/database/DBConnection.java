@@ -1,4 +1,4 @@
-package database;
+package Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,8 +14,8 @@ public class DBConnection
     }
 
     /**
-     * Makes a connection with the database.
-     * @return Returns a database connection.
+     * Makes a connection with the Database.
+     * @return Returns a Database connection.
      */
     public Connection connection()
     {
