@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"huisCentrale","l":"Application"},{"p":"Authentication","l":"Authenticate"},{"p":"Database","l":"DBConnection"},{"p":"Device","l":"Device"},{"p":"huisCentrale.Controllers","l":"DeviceController"},{"p":"huisCentrale","l":"GreetingControllerTests"}]
