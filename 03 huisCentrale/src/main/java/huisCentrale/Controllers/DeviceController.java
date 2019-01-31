@@ -1,39 +1,51 @@
 package huisCentrale.Controllers;
 
-import Authentication.Authenticate;
 import Device.Device;
-import Database.DBConnection;
-
-import com.google.gson.Gson;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.fazecast.jSerialComm.SerialPort;
-
 import java.util.*;
-import java.util.concurrent.TimeUnit;
+
+/**
+ * <h1>DeviceController HuisCentrale Mijn Domein</h1>
+ * De devicecontroller draait in een eigen thread volgens een timertask.
+ * Dit zorgt ervoor dat deze niet continu draait maar alleen op een vooraf
+ * ingesteld interval zijn code uitvoerd.
+ *
+ * @author  Groep 2 Mijn Domein
+ * @version 1.0
+ * @since   2019-01-01
+ */
 
 @RestController
 public class DeviceController extends TimerTask {
 
-
     public static HashMap<String, Device> devices = new HashMap<String, Device>();
 
-    public static Collection<Device> getAllDevices(){
-        return devices.values();
-    }
-
+    /**
+     * Deze methode voegt een apparaat toe aan de Hashmap devices zodat de
+     * DeviceContoller weet welke apparaten zjin aangesloten en bestuurd moeten worden.
+     * @param comport Ieder apparaat werkt op een eigen comport. Deze zal als identifier worden gebruikt
+     * @param device  Dit is het toe te voegen apparaat
+     */
     public static void addDevice(String comport, Device device){
         devices.put(comport,device);
     }
+
+    /**
+     * Deze methode verwijderd een device uit de hashmap
+     * @param comport Ieder apparaat werkt op een eigen comport. Deze zal als identifier worden gebruikt om te verwijderen
+     */
     public static void removeDevice(String comport){
         devices.remove(comport);
     }
 
+    /**
+     * Deze methode verwijderd alle devices en voert voor elk device ook een stop methode uit zodat deze ook goed gesloten wordt.
+     */
     public static void clearDevices(){
         for(Device an: devices.values()){
             an.stop();
@@ -41,25 +53,14 @@ public class DeviceController extends TimerTask {
         devices.clear();
     }
 
-    public static void start() throws InterruptedException {
-        for(Device an: devices.values()){
-
-            System.out.println(an);
-            System.out.println(an.getComport());
-            an.start();
-            TimeUnit.SECONDS.sleep(5);
-//            an.update();
-        }
-    }
-
-    public static void getAllConnectedDevices(){
-        for(SerialPort sp: SerialPort.getCommPorts()){
-            System.out.println(sp.getCTS());
-            System.out.println(sp.getSystemPortName());
-        }
-    }
-
-    // deze kan nog beter met een update value
+    /**
+     * Deze methode wordt aangeroepen vanuit de bedrijfsserver. Deze zorgt ervoor dat de waarde die vanuit
+     * deze server wordt verstuurd naar het juiste apparaat wordt doorgestuurd.
+     * DeviceContoller weet welke apparaten zjin aangesloten en bestuurd moeten worden.
+     * @param deviceName Ieder apparaat werkt heeft een unieke naam waarmee deze geidentificeerd kan worden.
+     * @param setValue  Dit is de waarde die naar het apparaat moet worden doorgestuurd.
+     * @return ResponseEntity Stuurt een bericht terug naar de bedrijfsserver dat alles goed ontvangen is.
+     */
     @PostMapping("/setDeviceStatus")
     public ResponseEntity<?> setDeviceStatus(@RequestParam(value = "deviceName") String deviceName, @RequestParam(value = "setValue") String setValue){
         System.out.println("Setting Device: " + deviceName);
@@ -71,81 +72,13 @@ public class DeviceController extends TimerTask {
         return new ResponseEntity<String>("Device set", HttpStatus.OK);
     }
 
-    @RequestMapping("devices/update")
-    public static void update(@RequestParam(value="deviceID", defaultValue="0") int deviceId){
-//          for(Device an: devices.values()){
-//            if (an.getdeviceId() == deviceId) {
-////                an.update();
-//                break;
-//            }
-//        }
-    }
-
-    @RequestMapping("devices/loadDevices")
-    public static void loadDevices(){
-       clearDevices();
-//       run();
-    }
-
-    @RequestMapping("devices/authenticate")
-    public static void authenticate(){
-        Authenticate authenticate = new Authenticate();
-        if(authenticate.verifyCentrale()){
-//            DeviceController.run();
-        }
-
-    }
-
-//    public static void run(){
-////        setAllDevices();
-//        try {
-//            start();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    public static void setAllDevicesAutomatic(){
-
-
-    }
-
-//    public static void setAllDevices() {
-//        DBConnection conn = new DBConnection();
-//        Connection c = conn.connection();
-//        ArrayList<Device> allDevices = new ArrayList<>();
-//        try
-//        {
-//            String query = "SELECT d.deviceID, d.devicePort,d.deviceState, d.deviceType, d.AnalogState FROM centrale c LEFT JOIN device D on d.centraleID = c.centraleID WHERE c.centraleMac =  (?)";
-//            PreparedStatement pstate = c.prepareStatement(query);
-//            pstate.setString(1, Authenticate.getId());
-//            ResultSet result = pstate.executeQuery();
-//            while(result.next())
-//            {
-//                int deviceID = result.getInt("deviceID");
-//                String comPort = result.getString("devicePort");
-//                int baudRate = 9600;
-//                String deviceState = result.getString("deviceState");
-//                String type = result.getString("deviceType");
-//                String analogState = result.getString("AnalogState");
-//                Device ar = new Device(deviceID, comPort, baudRate, deviceState, type, analogState);
-//                allDevices.add(ar);
-//            }
-//            c.close();
-//        }
-//        catch (SQLException e)
-//        {
-//            e.printStackTrace();
-//        }
-//        catch (NullPointerException n)
-//        {
-//            n.printStackTrace();
-//        }
-//        devices = allDevices;
-//    }
-
     /**
-     * The action to be performed by this timer task.
+     * Deze methode is de daadwerkelijke run methode die elke seconde wordt gedraaid
+     * Deze detecteerd of er een wijziging is geweest in het aantal aangesloten apparaten
+     * en mocht dit zo zijn dan verwijderd deze ze allemaal.
+     * Voor ieder aangesloten apparaat op een serieele port wordt vervolgens gekeken of deze al
+     * toegevoegd is. Als dit niet zo is dan gebeurd dit alsnog en wordt het apparaat gestart en zal
+     * deze in zijn eigen thread verder communiceren met de bedrijfsserver.
      */
     @Override
     public void run() {
@@ -161,10 +94,8 @@ public class DeviceController extends TimerTask {
                 device.start();
             }
             else{
-//                System.out.println("all devices already added");
+                // do nothing
             }
         }
-
     }
-
 }

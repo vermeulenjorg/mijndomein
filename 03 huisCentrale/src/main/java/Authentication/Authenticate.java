@@ -30,7 +30,7 @@ public class Authenticate {
      */
     public boolean verifyCentrale()
     {
-        setId();
+
         try
         {
             DBConnection conn = new DBConnection();

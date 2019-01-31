@@ -16,20 +16,27 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <h1>Device HuisCentrale Mijn Domein</h1>
+ * Ieder device wordt aangestuurd vanuit de deviceController
+ * Ieder device heeft een comport, baudrate en serialport. Aan de hand van de comport wordt
+ * de serialport (verbinding) gemaakt. Deze zijn allen nodig om de verbinding te maken.
+ * Daarnaast is ieder device van een bepaald type en heeft het een state en
+ * measure. Die laatste geldt alleen als het een analoog device is.
+ *
+ * @author  Groep 2 Mijn Domein
+ * @version 1.0
+ * @since   2019-01-01
+ */
 public class Device {
     private String comPort;
     private int baudRate;
-
     private SerialPort serialPort;
-
     private String deviceState;
     private String deviceType;
     StringBuilder message;
-//    private static List instances = new ArrayList();
     private String deviceName;
     private String deviceMeasure;
-//  private int deviceID;
-//    private String type;
 
     public Device(int deviceID, String comPort, int baudRate, String deviceState, String type){
         message = new StringBuilder();
@@ -45,165 +52,103 @@ public class Device {
         this.serialPort = SerialPort.getCommPort(this.comPort);
     }
 
-
-
-    public String getDeviceType(){
-        return deviceType;
-    }
-
-
-
-
-//    public Device(int deviceID, String comPort, int baudRate, String deviceState, String type, String analogState){
-//
-//        message = new StringBuilder();
-//        this.comPort = comPort;
-//        this.baudRate = baudRate;
-//        this.type = type;
-//        this.deviceID = deviceID;
-//        this.deviceState =deviceState;
-//        this.serialPort = SerialPort.getCommPort(this.comPort);
-//        this.analogState = analogState;
-//
-//    }
-//
-//    public void update(){
-//        DBConnection conn = new DBConnection();
-//        Connection c = conn.connection();
-//        try
-//        {
-//            String query = "SELECT deviceState,AnalogState FROM device WHERE deviceID = (?)";
-//            PreparedStatement pstate = c.prepareStatement(query);
-//            pstate.setInt(1, this.deviceID);
-//            ResultSet result = pstate.executeQuery();
-//            while(result.next())
-//            {
-//                if (this.type.equalsIgnoreCase("ANALOG")){
-//                    this.analogState = result.getString("AnalogState");
-//                    this.sendCommand(this.analogState);
-//                }
-//                else if (this.type.equalsIgnoreCase("DIGITAL")){
-//                    this.deviceState = result.getString("deviceState");
-//                    this.sendCommand(this.deviceState.toUpperCase());
-//                }
-//            }
-//            c.close();
-//        }
-//        catch (SQLException e)
-//        {
-//            e.printStackTrace();
-//        }
-//        catch (NullPointerException n)
-//        {
-//            n.printStackTrace();
-//        }
-//    }
-
+    /**
+     * Deze methode haalt de deviceName op. Deze wordt gebruikt om een device te identificeren
+     * @return String deviceName de naam van het device
+     */
     public String getDeviceName(){
         return deviceName;
     }
 
-//    public String getanalogState(){
-//        return this.analogState;
-//    }
-
-    public String getdeviceState(){
-        return this.deviceState;
-    }
-
-    public String getComport(){
-        return this.comPort;
-    }
-
-//    public int getdeviceId(){
-//        return this.deviceID;
-//    }
-
-    public int getBaudRate(){
-        return this.baudRate;
-    }
-
-//    public String getType(){
-//        return this.type;
-//    }
-
+    /**
+     * Deze methode start het device door deze te connecten en vervolgens een listener toe te voegen op de port.
+     */
     public void start(){
         connect();
         System.out.println(serialPort.isOpen());
         addListener();
     }
 
+    /**
+     * Deze methode stopt het device door de listener te verwijderen en vervolgens de connectie op de poort te sluiten.
+     */
     public void stop(){
-//        if (serialPort.isOpen()){
             serialPort.removeDataListener();
             serialPort.closePort();
             System.out.println("Closed" + serialPort.getDescriptivePortName());
-//        }
     }
 
+    /**
+     * Deze methode stuurt berichten door naar het aangesloten device
+     * @param Command  Dit is de waarde die naar het apparaat moet worden doorgestuurd.
+     */
     public void sendCommand(String Command){
         Command = Command + "\n";
         byte[] b = encryt(Command);
         this.serialPort.writeBytes(b,b.length);
     }
 
+    /**
+     * Deze methode encrypt berichten die over de serieele port gestuurd moeten worden.
+     * Dit zijn namelijke bytes en geen Strings
+     * @param message  Het te encrypten bericht
+     * @return Byte[] de encrypte byte Array
+     */
     public byte[] encryt(String message){
         byte[] b = message.getBytes();
         return b;
     }
 
-    public String decryt(byte[] newData){
-        String s = new String(newData);
-        return s;
-    }
-
+    /**
+     * Deze methode set alle waarden voor een connectie over een serieele poort op deze port en open deze port vervolgens
+     */
     public void connect(){
         this.serialPort.setBaudRate(this.baudRate);
         this.serialPort.setNumDataBits(8);
         this.serialPort.openPort();
     }
-//
-//    public void insertStatement(String value) {
-//        DBConnection conn = new DBConnection();
-//        Connection c = conn.connection();
-//        try {
-//            String addQuery = "INSERT INTO deviceLogging (deviceID, measure) VALUES (?, ?)";
-//            PreparedStatement pstate = c.prepareStatement(addQuery);
-//            pstate.setInt(1, deviceID);
-//            pstate.setString(2, value);
-//            pstate.executeUpdate();
-//            c.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void updateStatement(String value) {
-//        DBConnection conn = new DBConnection();
-//        Connection c = conn.connection();
-//        if(this.getType().equalsIgnoreCase("ANALOG")){
-//        try {
-//            String[] parts = value.substring(1).split("/");
-//            if (parts.length == 3){
-//                if(!parts[1].equalsIgnoreCase("SET") ){
-//                    String addQuery = "UPDATE Device SET measuredAnalogState = (?), deviceState = (?) WHERE deviceName = (?)";
-//                    PreparedStatement pstate = c.prepareStatement(addQuery);
-//                    pstate.setString(1, parts[2]);
-//                    pstate.setString(2, parts[1]);
-//                    pstate.setString(3, parts[0]);
-//                    pstate.executeUpdate();
-//                    c.close();
-//                }
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//    }
 
+    /**
+     * Deze methode stuurt de berichten van de device door naar de bedrijfsserver mits deze volledig zijn.
+     */
+    public void sendToServer (String toProcess){
+        String[] parts = toProcess.substring(1).split("/");
+        if (parts.length == 4){
+            if (parts[0].length() == 6){
+                deviceName = parts[0];
+                deviceType = parts[1];
+                deviceState = parts[2];
+                deviceMeasure = parts[3];
+                System.out.println(toProcess);
+                try {
+                    String url = "http://localhost:8080";
+                    CloseableHttpClient client = HttpClients.createDefault();
+                    HttpPost httpPost = new HttpPost(url + "/adding");
 
+                    List<NameValuePair> params = new ArrayList<NameValuePair>();
+                    params.add(new BasicNameValuePair("huisCentrale", Application.id));
+                    params.add(new BasicNameValuePair("deviceName", deviceName));
+                    params.add(new BasicNameValuePair("deviceType", deviceType));
+                    params.add(new BasicNameValuePair("deviceState", deviceState));
+                    params.add(new BasicNameValuePair("deviceMeasure", deviceMeasure));
+                    httpPost.setEntity(new UrlEncodedFormEntity(params));
+                    CloseableHttpResponse response = client.execute(httpPost);
+                    client.close();
+                }catch (Exception e){
 
+                }
+            }
+        }
+    }
 
+    /**
+     * Deze listener methode wordt uitgevoerd zolang de serieele port open is en de listener is toegevoegd.
+     * Deze luistert naar de waarden die binnen komen als een byte array.
+     * Vervolgens decode hij deze naar een string. Deze wordt ook weer gecontroleerd op volledigheid omdat
+     * er soms bytes verloren kunnen gaan. Dit gebeurdt meestal alleen bij het starten of sluiten van de port omdat
+     * het zenden vanuit de port zijn eigen frequentie heeft en deze listener er op een willekeurig de berichten begint
+     * te ontvangen. Zodra er een goed bericht is ontvangen wordt deze doorgestuurd door middel van een post
+     */
     public void addListener() {
         serialPort.addDataListener(new SerialPortDataListener() {
             @Override
@@ -220,33 +165,7 @@ public class Device {
                         message.append((char) b);
                         if ((b == 13 || b == 10)&& message.length() > 1) {
                             String toProcess = message.toString();
-                            String[] parts = toProcess.substring(1).split("/");
-                            if (parts.length == 4){
-                                if (parts[0].length() == 6){
-                                    deviceName = parts[0];
-                                    deviceType = parts[1];
-                                    deviceState = parts[2];
-                                    deviceMeasure = parts[3];
-                                    System.out.println(toProcess);
-                                    try {
-                                        String url = "http://localhost:8080";
-                                        CloseableHttpClient client = HttpClients.createDefault();
-                                        HttpPost httpPost = new HttpPost(url + "/adding");
-
-                                        List<NameValuePair> params = new ArrayList<NameValuePair>();
-                                        params.add(new BasicNameValuePair("huisCentrale", Application.id));
-                                        params.add(new BasicNameValuePair("deviceName", deviceName));
-                                        params.add(new BasicNameValuePair("deviceType", deviceType));
-                                        params.add(new BasicNameValuePair("deviceState", deviceState));
-                                        params.add(new BasicNameValuePair("deviceMeasure", deviceMeasure));
-                                        httpPost.setEntity(new UrlEncodedFormEntity(params));
-                                        CloseableHttpResponse response = client.execute(httpPost);
-                                        client.close();
-                                    }catch (Exception e){
-
-                                    }
-                                }
-                            }
+                            sendToServer(toProcess);
                             message.setLength(0);
                         }
                     }
@@ -259,26 +178,4 @@ public class Device {
             }
         });
     }
-
-
-
-
-
-//    private static void getEmployees()
-//    {
-//        final String uri = "http://localhost:8080/springrestexample/employees.xml";
-//
-//        RestTemplate restTemplate = new RestTemplate();
-//        String result = restTemplate.getForObject(uri, String.class);
-//
-//        System.out.println(result);
-//    }
-
-
-
-
-
-
-
-
 }

@@ -1,13 +1,26 @@
 package huisCentrale;
 
+
 import huisCentrale.Controllers.DeviceController;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.core.env.Environment;
-
 import java.util.Timer;
+
+/**
+ * <h1>HuisCentrale Mijn Domein</h1>
+ * Iedere huiscentrale heeft een eigen ID welke meegeleverd wordt op de doos.
+ * Als eerste zal er een spring boot applicatie gestart worden welke alle netwerkverkeer mogelijk maakt.
+ * Na het opstarten zal na 1 seconde de huiscentrale beginnen te werken en start een deviceController
+ * Iedere seconde zal er worden gekeken of er nieuwe apparaten zijn aangesloten
+ * Deze deviceController start in zijn eigen Thread.
+ * Ieder aangesloten apparaat zal zichzelf bij de server melden met de authenticatie van de huiscentrale.
+ * Deze handeld de request verder af.
+ *
+ *
+ * @author  Groep 2 Mijn Domein
+ * @version 1.0
+ * @since   2019-01-01
+ */
 
 @SpringBootApplication
 public class Application {
@@ -15,73 +28,11 @@ public class Application {
     private static long period = 1000L;
     public static String id = "386dae03-d604-4166-aa17-a8a0af0b0848";
 
-/**
- * Maakt de ID voor de server (MAC ADRES)
- * RUNT de webserver voor communicatie
- * RUNT alle devices die geregistreerd staan op deze huiscentrale
- */
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-
-        // kan een test worden:
-//        Device device = new Device(1, "COM5", 9600, "OFF", "ANALOG", "10");
-//        device.start();
-/** Dit stuk maakt een nieuwe Thread aan die scant of er nieuwe devices worden aangesloten. Deze worden dan ook automatisch aangezet.
- *  Het luisteren naar nieuwe poorten gebeurd iedere 10 seconden.
- // */
         DeviceController pm = new DeviceController();
         Timer timer = new Timer("Timer");
         timer.scheduleAtFixedRate(pm, delay, period);
-
-
-
-
-
-
-        // werkend:
-//             for(SerialPort sp: SerialPort.getCommPorts()){
-//            String key = sp.getSystemPortName();
-////            if(first) {
-////            if (!DeviceController.deviceExists(key)){
-//                Device device = new Device(1, sp.getSystemPortName(), sp.getBaudRate(),"OFF", "ANALOG");
-//                device.start();
-//                DeviceController.addDevice(device);
-////                device.start();
-////                first = false;
-////            }
-//
-//        }
-//
-
-
-
-
-
-
-
-//        Authenticate authenticate = new Authenticate();
-//        DeviceController.getAllConnectedDevices();
-
-
-
-//        PortManager pm = new PortManager();
-//        Timer timer = new Timer("Timer");
-//        timer.scheduleAtFixedRate(pm, delay, period);
-
-//        allDevices.add(ar);
-
-//        DeviceController.run();
-
-
-
-
-
-
-//        System.out.println(authenticate.verifyCentrale());
-//        if(authenticate.verifyCentrale()){
-//
-//        }
      }
 
 }
